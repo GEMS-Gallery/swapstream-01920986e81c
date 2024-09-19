@@ -1,0 +1,16 @@
+type TokenId = text;
+type Balance = float64;
+service : {
+  addLiquidity: (Balance, Balance) -> ();
+  getLiquidityPoolBalances: () -> (vec record {
+                                         TokenId;
+                                         Balance;
+                                       }) query;
+  getUserBalances: () -> (vec record {
+                                TokenId;
+                                Balance;
+                              }) query;
+  mintTokens: (TokenId, Balance) -> ();
+  removeLiquidity: (Balance, Balance) -> ();
+  swap: (TokenId, TokenId, Balance) -> (Balance);
+}

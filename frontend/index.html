@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DEX</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple DEX</h1>
+        
+        <div class="section">
+            <h2>User Balances</h2>
+            <div id="userBalances"></div>
+        </div>
+
+        <div class="section">
+            <h2>Liquidity Pool</h2>
+            <div id="liquidityPool"></div>
+        </div>
+
+        <div class="section">
+            <h2>Mint Tokens</h2>
+            <select id="mintToken">
+                <option value="TokenA">Token A</option>
+                <option value="TokenB">Token B</option>
+            </select>
+            <input type="number" id="mintAmount" placeholder="Amount">
+            <button onclick="mintTokens()">Mint</button>
+        </div>
+
+        <div class="section">
+            <h2>Add Liquidity</h2>
+            <input type="number" id="addLiquidityA" placeholder="Token A Amount">
+            <input type="number" id="addLiquidityB" placeholder="Token B Amount">
+            <button onclick="addLiquidity()">Add Liquidity</button>
+        </div>
+
+        <div class="section">
+            <h2>Remove Liquidity</h2>
+            <input type="number" id="removeLiquidityA" placeholder="Token A Amount">
+            <input type="number" id="removeLiquidityB" placeholder="Token B Amount">
+            <button onclick="removeLiquidity()">Remove Liquidity</button>
+        </div>
+
+        <div class="section">
+            <h2>Swap Tokens</h2>
+            <select id="fromToken">
+                <option value="TokenA">Token A</option>
+                <option value="TokenB">Token B</option>
+            </select>
+            <select id="toToken">
+                <option value="TokenB">Token B</option>
+                <option value="TokenA">Token A</option>
+            </select>
+            <input type="number" id="swapAmount" placeholder="Amount">
+            <button onclick="swap()">Swap</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
